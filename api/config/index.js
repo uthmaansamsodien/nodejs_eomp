@@ -9,4 +9,4 @@ const connection = createPool({
     connectionLimit: 30
 })
 
-module.exports =  connection
+module.exports = connection
