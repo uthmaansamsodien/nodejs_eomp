@@ -1,3 +1,5 @@
+const db = require("../config");
+
 class Users {
     fetchUsers(req, res) {
       const query = `
@@ -28,3 +30,5 @@ class Users {
               })
           })
     }}
+
+    module.exports = Users
