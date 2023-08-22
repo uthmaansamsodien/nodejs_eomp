@@ -1,7 +1,4 @@
 const db = require("../config");
-
-
-
 class Products{
     fetchProducts(req,res){
         const query =` SELECT prodID, prodName, quantity, amount, prodInfo, prodUrl FROM Products;`
@@ -30,18 +27,20 @@ class Products{
             })
       }
       deleteProduct(req, res) {
-        const query = `
-        DELETE FROM Products
-        WHERE prodID = ${req.params.id};
+        const query = `DELETE FROM Products WHERE prodID = ${req.params.id};
         `
         db.query(query, (err)=>{
             if(err) throw err
             res.json({
-                status: statusCode,
-                msg: "Removal Complete"
+                status: res.statusCode,
+                msg: "Product Removed"
             })
         })
       }
+
+
+
+
 }
 
 
