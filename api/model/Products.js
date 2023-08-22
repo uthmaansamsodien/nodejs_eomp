@@ -29,24 +29,21 @@ class Products{
                 })
             })
       }
-       addProd(req, res) {
-        
+      deleteProduct(req, res) {
         const query = `
-        INSERT INTO Products
-        (prodID, prodName, quantity, amount, prodInfo, prodUrl) VALUES ( ? ? ? ? ?)
+        DELETE FROM Products
+        WHERE prodID = ${req.params.id};
         `
-        db.query(query,(err, results)=>{
+        db.query(query, (err)=>{
             if(err) throw err
             res.json({
-                status: res.statusCode,
-                results,
-                msg: "Added Product"
+                status: statusCode,
+                msg: "Removal Complete"
             })
         })
       }
-
-      
-
 }
+
+
 
 module.exports = Products
