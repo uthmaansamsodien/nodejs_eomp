@@ -1,6 +1,8 @@
 const {express,routes} = require('./controller')
 const app = express()
 const path = require('path')
+const db = require('./config')
+const bodyParser = require('body-parser')
 const port = +process.env.PORT || 3000
 
 app.use(
@@ -31,18 +33,46 @@ app.listen(port, ()=>{
     console.log(`The server is running on port ${port}`);
 })
 
-app.post('./api/products', (req, res) => {
-    const product = req.body; // Assuming the request body contains product details
+// Add products to api
 
-    const query = 'INSERT INTO Products SET ?';
-    const values = [product.prodID, product.prodName, product.amount];
+app.post('/products', bodyParser.json(), (req,res)=>{
+    const query =`INSERT INTO Products SET ?;`
+    db.query(query, [req.body],
+        (err)=>{
+            if (err) throw err;
+            res.json({
+                status:res.statusCode,
+                msg:"Product has been added"
+            })
+        })
+})
 
-    connection.query(query, values, (err, result) => {
-        if (err) {
-            console.error('Error adding product to MySQL:', err);
-            res.status(500).json({ message: 'Error adding product' });
-        } else {
-            res.json({ message: 'Product added successfully' });
-        }
-    });
-});
+
+// Delete products from api
+
+app.delete('/product/:id', (req,res)=>{
+    const query =`
+    DELETE FROM Products WHERE prodID = ${req.params.id};`
+    db.query(query,(err)=>{
+        if(err) throw err;
+        res.json({
+            status:res.statusCode,
+            msg:"Product was successfully deleted"
+        })
+    })
+})
+
+
+// add user
+
+app.post('/users', bodyParser.json(), (req,res)=>{
+    const query = `INSERT INTO Users SET ?;`
+    db.query(query,[req.body],
+        (err)=>{
+            if(err)throw err;
+            res.json({
+                status:res.statusCode,
+              msg:"Registration was successful."
+            })
+        })  
+    })

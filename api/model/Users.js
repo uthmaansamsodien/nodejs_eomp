@@ -1,9 +1,9 @@
-const db = require("../config");
+const db = require('../config')
 
 class Users {
     fetchUsers(req, res) {
       const query = `
-          SELECT userID, firstName, lastName, gender, userDOB, emailAdd, profileUrl
+          SELECT userID, firstName, lastName, userAge, gender, userRole,emailAdd, userPass, userProfile
           FROM Users;
           `
           db.query(query,
@@ -17,18 +17,21 @@ class Users {
     }
     fetchUser(req, res) {
       const query = `
-      SELECT userID, firstName, lastName, gender, userDOB, emailAdd, profileUrl
+      SELECT userID, firstName, lastName, userAge, gender, userRole,emailAdd, userPass, userProfile
       FROM Users
       WHERE userID = ${req.params.id};
       `
       db.query(query,
-          (err, result) => {
+          (err, results) => {
               if(err) throw err
               res.json({
                   status: res.statusCode,
-                  result
+                  results
               })
           })
-    }}
+    }
+
+}
+
 
     module.exports = Users
