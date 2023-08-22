@@ -9,11 +9,11 @@ routes.get("/products", (req, res) => {
   });
   
   routes.get("/products/:id", (req, res) => {
-    product.fetchProduct(req, res);
+    products.fetchProduct(req, res);
   });
 
   routes.delete("/product/:id", (req, res) => {
-    product.deleteProduct(req, res);
+    products.deleteProduct(req, res);
   });
 
   routes.get("/users", (req, res) => {

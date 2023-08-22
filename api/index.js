@@ -72,7 +72,7 @@ app.post('/users', bodyParser.json(), (req,res)=>{
             if(err)throw err;
             res.json({
                 status:res.statusCode,
-              msg:"Registration was successful."
+              msg:"User was added"
             })
         })  
     })
