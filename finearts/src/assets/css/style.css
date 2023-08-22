@@ -11,5 +11,20 @@ body{
 }
 
 .logo{ 
-    height: 8rem;
+    height: 10rem;
+}
+.nav-link{
+    color: #faf1e4;
+    margin: 2rem;
+}
+.head-logo{ 
+    color: #faf1e4;
+    padding-left: 3rem;
+}
+.quote_1{
+    color:#435334;
+}
+
+h1{
+    font-size: 90 px;
 }

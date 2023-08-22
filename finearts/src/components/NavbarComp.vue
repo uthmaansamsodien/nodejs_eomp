@@ -2,13 +2,16 @@
     <div>
       <nav class="navbar navbar-expand-lg" >
         <div class="container-fluid">
-          <router-link class="navbar-brand" to="/" ><img class="logo" src="https://i.postimg.cc/CM64PCSw/fine-1-removebg-preview.png" alt="Logo"></router-link>
+          <router-link class="navbar-brand" to="/" ><img class="logo" src="https://i.postimg.cc/Bv4HVcp6/fine-1-removebg-preview.png g" alt="Logo"></router-link>
           <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
             <span><i class="bi bi-list"></i></span>
           </button>
-          <div class="collapse navbar-collapse" id="navbarSupportedContent">
-            <ul class="navbar-nav mx-auto mb-2 mb-lg-0">
+          <div class="head">
+            <!-- <h1 class="head-logo mx-auto">FINE ARTS</h1> -->
+          </div>
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">                        
+            <ul class="navbar-nav mx-auto">
               <li class="nav-item">
                 <router-link class="nav-link bi-house" to="/">  HOME</router-link>
               </li>
@@ -26,7 +29,7 @@
               </li>
             </ul>   
           </div>
-          <router-link class="navbar-brand" to="/" ><img class="logo" src="https://i.postimg.cc/CM64PCSw/fine-1-removebg-preview.png" alt="Logo"></router-link>
+          <router-link class="navbar-brand" to="/" ><img class="logo" src="https://i.postimg.cc/Bv4HVcp6/fine-1-removebg-preview.png" alt="Logo"></router-link>
 
         </div>
       </nav>
@@ -41,6 +44,11 @@
 <style scoped>
 .navbar{
   background-color: #435334;
+}
+
+.head  {
+  display: flex;
+  justify-content: center;
 }
 
 </style>

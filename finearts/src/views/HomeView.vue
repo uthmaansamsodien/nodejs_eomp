@@ -1,11 +1,11 @@
 <template>
   <div class="home">
-    <HelloWorld msg="Welcome to Your Vue.js App"/>
+    <h1>FINE ARTS</h1>
+    <p class="quote_1">“Learning never exhausts the mind.” -Leonardo da Vinci</p>
   </div>
+
 </template>
 
 <script>
 
-export default {
-  }
 </script>
