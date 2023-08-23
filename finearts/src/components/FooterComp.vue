@@ -22,5 +22,7 @@
 }
 .foot_info{
      color: #faf1e4;
+     font-family: 'Belleza', sans-serif;
 }
+
 </style>
