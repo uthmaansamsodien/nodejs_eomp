@@ -1,15 +1,5 @@
 <template>
-    <div>
-        <div class="card" v-for="products in products" style="width: 18rem;" :key="products.prodId">
-        <img :src="products.prodUrl" class="card-img-top" >
-        <div class="card-body">
-          <h5 class="card-title">{{products.prodName}}</h5>
-          <p class="card-text">{{products.prodInfo}}</p>
-          <a href="#" class="btn btn-primary">Go somewhere</a>
-        </div>
-      </div>
-    </div>
-    <!-- <div class="container">
+    <div class="container">
         <div class="row">
             <div class="display-2">
                     <h2 class="prodhead">Products</h2>
@@ -29,7 +19,7 @@
                 <SpinnerCompVue/>
             </div>
         </div>
-    </div> -->
+    </div>
 </template>
 <script>
 import SpinnerCompVue from '@/components/SpinnerComp.vue'

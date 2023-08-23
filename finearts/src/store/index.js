@@ -29,12 +29,7 @@ export default createStore({
     setSpinner(state , value){
       state.spinner = value
     },
-    setToken(state, token){
-      state.token = token
-    },
-    setMsg(state, msg){
-      state.msg = msg
-    }
+  
   },
   actions: {
     async fetchProducts(context){
@@ -42,7 +37,7 @@ export default createStore({
         const {data} = await axios.get(`${bkURL}products`)
         context.commit("setProducts", data.results)
       }catch(e){
-        context.commit("setMsg", "An error occurred")
+       alert(e.message)
       }
     }
   },
