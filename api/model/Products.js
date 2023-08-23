@@ -18,11 +18,11 @@ class Products{
         WHERE prodID = ${req.params.id};
         `
         db.query(query,
-            (err, result) => {
+            (err, results) => {
                 if(err) throw err
                 res.json({
                     status: res.statusCode,
-                    result
+                    results
                 })
             })
       }
@@ -32,7 +32,7 @@ class Products{
         db.query(query, (err)=>{
             if(err) throw err
             res.json({
-                status: res.statusCode,
+                status:res.statusCode,
                 msg: "Product Removed"
             })
         })
