@@ -1,5 +1,4 @@
 const db = require('../config')
-
 class Users {
     fetchUsers(req, res) {
       const query = `
@@ -30,8 +29,18 @@ class Users {
               })
           })
     }
-
+    
+    addUser(req, res) {
+        const query = `INSERT INTO Users SET ?;`
+        db.query(query,[req.body],
+            (err)=>{
+                if(err)throw err;
+                res.json({
+                    status:res.statusCode,
+                    msg:"User was added"
+            })
+        })  
+    }
 }
 
-
-    module.exports = Users
+module.exports = Users
