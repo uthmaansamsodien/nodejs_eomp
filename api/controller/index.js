@@ -24,6 +24,7 @@ routes.get("/products", (req, res) => {
     users.fetchUser(req, res);
   });
 
+  routes.post("/products")
 
 
 module.exports = {
