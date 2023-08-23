@@ -8,7 +8,7 @@ routes.get("/products", (req, res) => {
     products.fetchProducts(req, res);
   });
   
-  routes.get("/products/:id", (req, res) => {
+  routes.get("/product/:id", (req, res) => {
     products.fetchProduct(req, res);
   });
 
