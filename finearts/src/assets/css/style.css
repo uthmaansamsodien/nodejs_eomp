@@ -36,3 +36,8 @@ h1{
     font-size: 110px;
     color: #435334;
 }
+.btnproject{
+    color: #faf1e4;
+    background-color: #435334;
+    border-radius: 0.4rem;
+}
