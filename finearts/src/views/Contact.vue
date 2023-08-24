@@ -40,7 +40,7 @@
                   name="surname"
                   type="text"
                   class="form-control"
-                  id="exampleFormControlInput1"
+                  id="exampleFormControlInput1" 
                   placeholder="(required)"
                   required
                   oninvalid="this.setCustomValidity('Please fill in the missing information')"
@@ -98,6 +98,7 @@ export default {};
 <style scoped>
 .contact-head {
   font-family: "Belleza", sans-serif;
+  color: #435334;
 }
 h2 {
   font-size: 80px;
@@ -109,5 +110,14 @@ h2 {
 .conpic{
   height: 31rem;
   margin-top: 4rem;
+}
+@media screen and (max-width: 768px) {
+  .contact-head{
+    font-size: 2rem;
+  }
+  .conpic{
+    height: 25rem;
+    padding-bottom: 4rem;
+  }
 }
 </style>

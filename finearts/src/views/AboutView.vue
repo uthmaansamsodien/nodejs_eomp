@@ -12,8 +12,8 @@
            We then decided to buy in and sell these aesthetic masterpices created by these art icons.
           </p>
         </div>
-        <div class="col d-none d-md-block">
-          <img
+        <div class="col d-md-block">
+          <img class="aboutpic"
             src="https://i.postimg.cc/3JYS0G06/pngtree-abstract-line-painting-female-looking-up-png-image-3195196-removebg-preview.png"
             alt="logo"
           />
@@ -58,7 +58,13 @@ h5 {
 
 @media screen and (max-width: 768px) {
   .aboutpic{
-    height: 10rem;
+    height: 10rem;   
+  }
+  .quote_1{
+    font-size: 1rem;
+  }
+  h1{ 
+    font-size: 3rem;
   }
 }
 </style>
