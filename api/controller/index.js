@@ -21,7 +21,7 @@ routes.get("/products", (req, res) => {
     products.deleteProduct(req, res);
   });
 
-  routes.patch("/products/:id", bodyParser.json(), (req, res) => {
+  routes.patch("/product/:id", bodyParser.json(), (req, res) => {
     products.updateProducts(req, res);
   });
 
