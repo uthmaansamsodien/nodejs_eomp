@@ -7,7 +7,7 @@
             <div class="headskill animate__animated animate__fadeInDownBig">
               <h2 class="contact-head"><ins>CONTACT US</ins></h2>
               <p class="contact-head">LET'S CONNECT</p>
-              <p class="contact-head">
+              <p class="quote_1">
                 “What would life be if we had no courage to attempt anything?” -
                 Vincent van Gogh
               </p>
@@ -81,7 +81,7 @@
           </div>
         </div>
         <div class="col">
-          <img
+          <img class="conpic"
             src="https://i.postimg.cc/YCXHbCFD/whiteframeart62-removebg-preview.png"
             alt="logo"
           />
@@ -105,5 +105,9 @@ h2 {
 }
 .left {
   padding-top: 3rem;
+}
+.conpic{
+  height: 31rem;
+  margin-top: 4rem;
 }
 </style>

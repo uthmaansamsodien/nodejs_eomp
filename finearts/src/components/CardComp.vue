@@ -1,9 +1,6 @@
 <template>
   <div class="container">
     <div class="row">
-      <div class="display-2">
-        <h2 class="prodhead">Products</h2>
-      </div>
       <div class="row justify-content-center gap-3" v-if="products">
         <div
           v-for="product in products"

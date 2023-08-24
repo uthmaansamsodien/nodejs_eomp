@@ -8,7 +8,7 @@
     box-sizing: border-box;
 }
 body{
-    background-color: #faf1e4;
+    background-color: #ffe0e0;
     font-family: 'Belleza', sans-serif;
 }
 
@@ -33,7 +33,7 @@ body{
 
 h1{
     font-family: 'Belleza', sans-serif;
-    font-size: 110px;
+    font-size: 90px;
     color: #435334;
 }
 .btnproject{
