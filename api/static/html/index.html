@@ -7,6 +7,84 @@
 </head>
 <body>
     <h2>Routes</h2>
+    <h2 style="text-align: center;">Routes</h2>
+    <h4 style="text-align: center;">Home</h4>
+    <table class="table">
+      <thead>
+        <tr>
+          <th scope="col">HTTP METHOD</th>
+          <th scope="col">Path</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <th scope="row col-6">GET</th>
+          <td class="col-6">/(Home Page)</td>
+        </tr>
+      </tbody>
+    </table>
+    <h4 style="text-align: center;">Users</h4>
+    <table class="table">
+      <thead>
+        <tr>
+          <th scope="col">HTTP METHOD</th>
+          <th scope="col">Path</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <th scope="row col-6">GET</th>
+          <td class="col-6">/users</td>
+        </tr>
+        <tr>
+          <th scope="row col-6">GET</th>
+          <td class="col-6">/user/:id</td>
+        </tr>
+        <tr>
+          <th scope="row col-6">POST</th>
+          <td class="col-6">/user</td>
+        </tr>
+        <tr>
+          <th scope="row col-6">PATCH/PUT</th>
+          <td class="col-6">/user/:id</td>
+        </tr>
+        <tr>
+          <th scope="row col-6">DELETE</th>
+          <td class="col-6">/user/:id</td>
+        </tr>
+      </tbody>
+    </table>
+    <h4 style="text-align: center;">Products</h4>
+    <table class="table">
+      <thead>
+        <tr>
+          <th scope="col">HTTP METHOD</th>
+          <th scope="col">Path</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <th scope="row col-6">GET</th>
+          <td class="col-6">/products</td>
+        </tr>
+        <tr>
+          <th scope="row col-6">GET</th>
+          <td class="col-6">/product/:id</td>
+        </tr>
+        <tr>
+          <th scope="row col-6">POST</th>
+          <td class="col-6">/product</td>
+        </tr>
+        <tr>
+          <th scope="row col-6">PATCH/PUT</th>
+          <td class="col-6">/product/:id</td>
+        </tr>
+        <tr>
+          <th scope="row col-6">DELETE</th>
+          <td class="col-6">/product/:id</td>
+        </tr>
+      </tbody>
+    </table>
     <script src="/api/index.js"></script>
 </body>
 </html>
