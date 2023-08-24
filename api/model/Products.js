@@ -57,33 +57,32 @@ class Products{
         }
 
           db.query(query, products,
-              (err, results)=>{
+              (err, products)=>{
                   if (err) throw err;
                   res.json({
                       status:res.statusCode,
                       msg:"Product has been added",
-                      results,
                     products
                   })
             })
       }
 
-    //   updateProducts(req,res){
-    //     const query = `
-    //     UPDATE Products
-    //     SET ?
-    //     WHERE prodID = ?
-    //     `
-    //     db.query(query,
-    //          [req.body, req.params.id],
-    //          (err)=>{
-    //             if(err) throw err
-    //             res.json({
-    //                 status: res.statusCode,
-    //                 msg: "Update Complete"
-    //             })
-    //          })
-    //   }
+      updateProducts(req,res){
+        const query = `
+        UPDATE Products
+        SET ?
+        WHERE prodID = ?
+        `
+        db.query(query,
+             [req.body, req.params.id],
+             (err)=>{
+                if(err) throw err
+                res.json({
+                    status: res.statusCode,
+                    msg: "Update Complete"
+                })
+             })
+      }
    
 
 }
