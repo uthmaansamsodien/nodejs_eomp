@@ -19,8 +19,8 @@ app.use(
       express.urlencoded({
           extended: true
       }),
-      cookieParser(),
       cors(),
+      cookieParser(),
       routes
   )
   

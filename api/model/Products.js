@@ -1,7 +1,7 @@
 const db = require("../config");
 class Products{
     fetchProducts(req,res){
-        const query =` SELECT prodID, prodName, quantity, amount, prodInfo, prodUrl FROM Products;`
+        const query =` SELECT prodID, prodName, quantity, prodPrice, prodArtist, prodYear, prodType, prodInfo, prodUrl FROM Products;`
         db.query(query,(err, results)=>{
             if (err) throw err
             res.json({
@@ -13,12 +13,10 @@ class Products{
 
     fetchProduct(req, res) {
         const query = `
-        SELECT prodID, prodName, quantity, amount, prodInfo, prodUrl 
-        FROM Products
-        WHERE prodID = ${req.params.id};
+        SELECT prodID, prodName, quantity, prodPrice, prodArtist, prodYear, prodType, prodInfo, prodUrl
+        FROM Products WHERE prodID = ${req.params.id};
         `
-        db.query(query,
-            (err, results) => {
+        db.query(query,(err, results) => {
                 if(err) throw err
                 res.json({
                     status: res.statusCode,
@@ -26,6 +24,8 @@ class Products{
                 })
             })
       }
+
+
       deleteProduct(req, res) {
         const query = `DELETE FROM Products WHERE prodID = ${req.params.id};
         `
@@ -38,17 +38,52 @@ class Products{
         })
       }
 
-      addProduct(req, res) {
-          const query =`INSERT INTO Products SET ?;`
-          db.query(query, [req.body],
-              (err)=>{
+      addProducts(req, res) {
+
+        
+
+        const query =`INSERT INTO Products SET ?;`
+
+        const products = {
+            prodID: req.body.prodID,
+            prodName:req.body.prodName,
+            quantity:req.body.quantity,
+            prodPrice:req.body.prodPrice,
+            prodArtist:req.body.prodArtist,
+            prodYear:req.body.prodYear,
+            prodType:req.body.prodType,
+            prodInfo:req.body.prodInfo,
+            prodUrl:req.body.prodUrl
+        }
+
+          db.query(query, products,
+              (err, results)=>{
                   if (err) throw err;
                   res.json({
                       status:res.statusCode,
-                      msg:"Product has been added"
+                      msg:"Product has been added",
+                      results,
+                    products
                   })
             })
       }
+
+    //   updateProducts(req,res){
+    //     const query = `
+    //     UPDATE Products
+    //     SET ?
+    //     WHERE prodID = ?
+    //     `
+    //     db.query(query,
+    //          [req.body, req.params.id],
+    //          (err)=>{
+    //             if(err) throw err
+    //             res.json({
+    //                 status: res.statusCode,
+    //                 msg: "Update Complete"
+    //             })
+    //          })
+    //   }
    
 
 }
@@ -56,3 +91,4 @@ class Products{
 
 
 module.exports = Products
+
