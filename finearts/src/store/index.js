@@ -1,6 +1,6 @@
 import { createStore } from "vuex";
 import axios from "axios";
-const bkURL = "https://backend-cqoc.onrender.com/";
+const bkURL = "https://nodeapieomp.onrender.com/";
 export default createStore({
   state: {
     users: null,
@@ -27,7 +27,7 @@ export default createStore({
     },
     setSpinner(state, value) {
       state.spinner = value;
-    },
+    }
   },
   actions: {
     async fetchProducts(context) {
