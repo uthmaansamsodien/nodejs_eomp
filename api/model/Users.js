@@ -1,4 +1,6 @@
 const db = require('../config')
+const {hash, compare, hashSync} = require('bcrypt')
+const {createToken} = require("../middleware/Authenticate")
 class Users {
     fetchUsers(req, res) {
       const query = `
@@ -41,6 +43,65 @@ class Users {
             })
         })  
     }
+
+    // async register(req, res) {
+    //     const data = req.body
+    //     //encrypt password
+    //     data.userPass = await hash(data.userPass, 15)
+    //     //payload
+    //     const user = {
+    //         emailAdd: data.emailAdd,
+    //         userPass: data.userPass
+    //     }
+    //     //query
+    //     const query = `
+    //     INSERT INTO Users
+    //     SET ?
+    //     `
+    //     db.query(query, [data], (err)=>{
+    //         if(err) throw err
+    //         //create token
+    //         let token = createToken(user)
+    //         res.json({
+    //             status: res.statusCode,
+    //             token,
+    //             msg: "Registration Complete"
+    //         })
+    //     })}
+
+    // Update User
+    updateUser(req, res) {
+        const query = `
+        UPDATE Users
+        SET ?
+        WHERE userID = ?
+        `
+        db.query(query,
+             [req.body, req.params.id],
+             (err)=>{
+                if(err) throw err
+                res.json({
+                    status: res.statusCode,
+                    msg: "Update Complete"
+                })
+             })}
+
+    // Delete user
+    deleteUser(req, res) {
+        const query = `
+        DELETE FROM Users
+        WHERE userID = ${req.params.id};
+        `
+        db.query(query, (err)=>{
+            if(err) throw err
+            res.json({
+                status:res.statusCode,
+                msg: "Removal Complete"
+            })
+        })
+      }
+
+      
 }
 
 module.exports = Users
