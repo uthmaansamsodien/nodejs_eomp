@@ -8,29 +8,78 @@
 </head>
 <body>
     <h2>Routes</h2>
+
+
     <table>
         <tr>
+            <th>HTTP METHOD</th>
+            <th>PATH</th>
+          </tr>
+          <tr>
+            <td>GET</td>
+            <td>/(home page/routes table)</td>
+          </tr>
+    </table>
+
+    <h2>Products</h2>
+
+    <table>
+        <tr>
+          <th>METHODS</th>
           <th>PATH</th>
-          <th>Header 2</th>
         </tr>
         <tr>
-          <td>Row 1, Column 1</td>
-          <td>Row 1, Column 2</td>
+          <td>GET</td>
+          <td>/products</td>
         </tr>
         <tr>
-          <td>Row 2, Column 1</td>
-          <td>Row 2, Column 2</td>
+          <td>GET</td>
+          <td>/product/:id</td>
         </tr>
         <tr>
-          <td>Row 3, Column 1</td>
-          <td>Row 3, Column 2</td>
+          <td>POST</td>
+          <td>/product</td>
         </tr>
         <tr>
-          <td>Row 4, Column 1</td>
-          <td>Row 4, Column 2</td>
+          <td>PATCH</td>
+          <td>/product/:id</td>
         </tr>
+        <tr>
+            <td>DELETE</td>
+            <td>/product/:id</td>
+          </tr>
       </table>
       
+
+      <h2>User</h2>
+
+      <table>
+        <tr>
+          <th>METHODS</th>
+          <th>PATH</th>
+        </tr>
+        <tr>
+          <td>GET</td>
+          <td>/user</td>
+        </tr>
+        <tr>
+          <td>GET</td>
+          <td>/users/:id</td>
+        </tr>
+        <tr>
+          <td>POST</td>
+          <td>/register</td>
+        </tr>
+        <tr>
+          <td>PATCH</td>
+          <td>/user/:id</td>
+        </tr>
+        <tr>
+            <td>DELETE</td>
+            <td>/user/:id</td>
+          </tr>
+      </table>
+
     <script src="/api/index.js"></script>
 </body>
 </html>

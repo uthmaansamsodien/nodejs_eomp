@@ -13,7 +13,7 @@ routes.get("/products", (req, res) => {
     products.fetchProduct(req, res);
   });
 
-  routes.post("/products", (req, res) => {
+  routes.post("/product", (req, res) => {
     products.addProducts(req, res);
   });
 
