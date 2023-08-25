@@ -35,10 +35,6 @@ routes.get("/products", (req, res) => {
     users.fetchUser(req, res);
   });
 
-  routes.post("/register", bodyParser.json(), (req, res) => {
-    users.register(req, res);
-  });
-
   routes.delete("/user/:id", (req, res) => {
     users.deleteUser(req, res);
   });
