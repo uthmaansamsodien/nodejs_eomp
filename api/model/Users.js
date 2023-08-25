@@ -44,30 +44,30 @@ class Users {
         })  
     }
 
-    // async register(req, res) {
-    //     const data = req.body
-    //     //encrypt password
-    //     data.userPass = await hash(data.userPass, 15)
-    //     //payload
-    //     const user = {
-    //         emailAdd: data.emailAdd,
-    //         userPass: data.userPass
-    //     }
-    //     //query
-    //     const query = `
-    //     INSERT INTO Users
-    //     SET ?
-    //     `
-    //     db.query(query, [data], (err)=>{
-    //         if(err) throw err
-    //         //create token
-    //         let token = createToken(user)
-    //         res.json({
-    //             status: res.statusCode,
-    //             token,
-    //             msg: "Registration Complete"
-    //         })
-    //     })}
+    async register(req, res) {
+        const data = req.body
+        //encrypt password
+        data.userPass = await hash(data.userPass, 15)
+        //payload
+        const user = {
+            emailAdd: data.emailAdd,
+            userPass: data.userPass
+        }
+        //query
+        const query = `
+        INSERT INTO Users
+        SET ?
+        `
+        db.query(query, [data], (err)=>{
+            if(err) throw err
+            //create token
+            let token = createToken(user)
+            res.json({
+                status: res.statusCode,
+                token,
+                msg: "Registration Complete"
+            })
+        })}
 
     // Update User
     updateUser(req, res) {
