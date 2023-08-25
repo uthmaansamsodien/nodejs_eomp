@@ -2,12 +2,12 @@
     <div>
         
     <h1><ins>OUR COLLECTION</ins></h1>
-    <p class="quote_1">““It takes a long time to become young.” -Pablo Picasso</p>
+    <p class="quote_1">“It takes a long time to become young.” -Pablo Picasso</p>
         <CardComp/>
         <SpinnerComp/>
+        <br/>
     </div>
-    <br />
-</template>
+</template> 
 
 <script>
 import CardComp from '@/components/CardComp.vue';

@@ -41,3 +41,17 @@ h1{
     background-color: #435334;
     border-radius: 0.4rem;
 }
+.card-body{
+    background-color:#435334;
+    color: #ffe0e0
+}
+.card{ 
+background-color: black;
+padding-top: 2rem;
+}
+.btn{
+    color: #faf1e4;
+}
+.home{
+    margin-left: 6rem;
+}

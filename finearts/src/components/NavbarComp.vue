@@ -72,4 +72,7 @@ export default {};
   display: flex;
   justify-content: center;
 }
+.nav-link:hover{
+  color: #234108;
+}
 </style>
