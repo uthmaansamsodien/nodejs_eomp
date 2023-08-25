@@ -11,14 +11,31 @@
           <img
             :src="product.prodUrl"
             class="card-img-top"
+            id="img"
             :alt="product.prodName"
           />
           <div class="card-body">
             <h5 class="card-title">{{ product.prodName }}</h5>
             <p class="card-text">
-              {{ product.prodInfo }}
+              {{ product.prodArtist }}
+            </p>
+            <p class="card-text">
+              {{ product.prodYear }}
+            </p>
+            <p class="card-text">
+              {{ product.prodType }}
+            </p>
+            <p class="card-text">
+              {{ product.prodPrice }}
+            </p>
+            <p class="card-text">
+              {{ product.quantity }}
+            </p>
+            <p class="card-text">
+              "{{ product.prodInfo }}"
             </p>
           </div>
+          <a class="btn" href="https://nodeapieomp.onrender.com/product/5" role="button">See painting</a>
         </div>
       </div>
       <div v-else class="row">
@@ -43,4 +60,9 @@ export default {
   },
 };
 </script>
-<style scoped></style>
+<style scoped>
+
+  #img{
+    aspect-ratio: 4/6;
+  }
+</style>
