@@ -38,6 +38,14 @@ export default createStore({
         alert(e.message);
       }
     },
+    async fetchUsers(context) {
+      try {
+        const { data } = await axios.get(`${bkURL}users`);
+        context.commit("setUsers", data.results);
+      } catch (e) {
+        alert(e.message);
+      }
+    }
   },
   modules: {},
 });

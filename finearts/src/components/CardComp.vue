@@ -17,25 +17,25 @@
           <div class="card-body">
             <h5 class="card-title">{{ product.prodName }}</h5>
             <p class="card-text">
-              {{ product.prodArtist }}
+              Artist: {{ product.prodArtist }}
             </p>
             <p class="card-text">
-              {{ product.prodYear }}
+              Year: {{ product.prodYear }}
             </p>
             <p class="card-text">
-              {{ product.prodType }}
+               Type: {{ product.prodType }}
             </p>
             <p class="card-text">
-              {{ product.prodPrice }}
+              R {{ product.prodPrice }}
             </p>
             <p class="card-text">
-              {{ product.quantity }}
+              Quantity: {{ product.quantity }}
             </p>
             <p class="card-text">
               "{{ product.prodInfo }}"
             </p>
           </div>
-          <a class="btn" href="https://nodeapieomp.onrender.com/product/5" role="button">See painting</a>
+          <a class="btn" href="#" role="button">See painting</a>
         </div>
       </div>
       <div v-else class="row">

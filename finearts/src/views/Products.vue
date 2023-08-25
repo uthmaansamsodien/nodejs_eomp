@@ -28,6 +28,7 @@ import CardComp from '@/components/CardComp.vue';
     h1{ 
       font-size: 3rem;
     }
+
   }
 </style>
 
