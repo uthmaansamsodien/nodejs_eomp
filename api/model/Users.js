@@ -48,11 +48,7 @@ class Users {
         const data = req.body
         //encrypt password
         data.userPass = await hash(data.userPass, 15)
-        //payload
-        const user = {
-            emailAdd: data.emailAdd,
-            userPass: data.userPass
-        }
+
         //query
         const query = `
         INSERT INTO Users
